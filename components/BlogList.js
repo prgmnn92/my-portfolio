@@ -9,10 +9,10 @@ const BlogItem = (props) => {
       rel="noreferrer"
     >
       <div>
-        <span className="mr-4 font-bold">{props.id}</span>
+        <span className="mr-2 md:mr-4 font-bold">{props.id}</span>
         <span>{props.title}</span>
       </div>
-      <span className="pl-4 font-semibold">{props.category}</span>
+      <span className="pl-2 font-semibold">{props.category}</span>
     </a>
   );
 };
