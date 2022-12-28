@@ -30,9 +30,9 @@ const LatestNews = () => {
             hit me up!
           </a>
           <br />
-          <p className="pt-4 ">Cheers</p>
-          <p className="">Phillip</p>
         </p>
+        <p className="pt-4 ">Cheers</p>
+        <p className="">Phillip</p>
       </div>
     </div>
   );
