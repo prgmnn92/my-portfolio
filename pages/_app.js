@@ -15,7 +15,6 @@ export default function App({ Component, pageProps }) {
     let speed = 0.08;
 
     let fpms = 60 / 1000;
-
     let xSet = gsap.quickSetter(ball, "x", "px");
     let ySet = gsap.quickSetter(ball, "y", "px");
 
@@ -23,6 +22,19 @@ export default function App({ Component, pageProps }) {
       mouse.x = e.x;
       mouse.y = e.y;
     };
+
+    // add function to frame animation ticker
+    gsap.ticker.add((time, deltaTime) => {
+      var delta = deltaTime * fpms;
+      var dt = 1.0 - Math.pow(1.0 - speed, delta);
+
+      pos.x += (mouse.x - pos.x) * dt;
+      pos.y += (mouse.y - pos.y) * dt;
+      xSet(pos.x);
+      ySet(pos.y);
+    });
+
+    window.addEventListener("mousemove", handleBall);
 
     document.addEventListener("mouseleave", function (event) {
       if (
@@ -50,19 +62,6 @@ export default function App({ Component, pageProps }) {
       }
     });
 
-    // add function to frame animation ticker
-    gsap.ticker.add((time, deltaTime) => {
-      var delta = deltaTime * fpms;
-      var dt = 1.0 - Math.pow(1.0 - speed, delta);
-
-      pos.x += (mouse.x - pos.x) * dt;
-      pos.y += (mouse.y - pos.y) * dt;
-      xSet(pos.x);
-      ySet(pos.y);
-    });
-
-    window.addEventListener("mousemove", handleBall);
-
     // cleanup this component
     return () => {
       window.removeEventListener("mousemove", handleBall);
@@ -72,7 +71,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
       <main className={interVariable.className}>
-        <div className="ball"></div>
+        <div className="ball init"></div>
         <Component {...pageProps} />
       </main>
     </ThemeProvider>
