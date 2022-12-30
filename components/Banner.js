@@ -64,7 +64,7 @@ const Banner = () => {
   return (
     <>
       <div className="flex flex-col-reverse relative md:flex md:flex-row py-4 md:h-screen md:max-h-[720px] items-center pb-[10%]">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 w-full">
           <h1 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8">
             Hi I’m Phillip, Frontend Dev.
             <br /> and Tech Enthusiast
