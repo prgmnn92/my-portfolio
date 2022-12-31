@@ -32,7 +32,7 @@ const LatestNews = () => {
           <br />
         </p>
         <p className="pt-4 ">Cheers</p>
-        <p className="">Phillip</p>
+        <p>Phillip</p>
       </div>
     </div>
   );

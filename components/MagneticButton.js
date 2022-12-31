@@ -1,5 +1,12 @@
-import React, { useRef, useState, useEffect, createRef } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  createRef,
+  useContext,
+} from "react";
 import { gsap, Elastic, Power3, SteppedEase } from "gsap";
+import { ACTION_TYPES, StoreContext } from "../store/store-context";
 
 const MagneticButton = ({
   children,
@@ -18,7 +25,13 @@ const MagneticButton = ({
   const itemBound = useRef();
   const diffBound = useRef({ x: 0, y: 0 });
 
+  const { dispatch } = useContext(StoreContext);
+
   const handleMouseEnter = () => {
+    dispatch({
+      type: ACTION_TYPES.SET_IS_OVER_BUTTON,
+      payload: true,
+    });
     gsap.killTweensOf($item.current);
     gsap.set($hover.current, {
       scale: scale,
@@ -35,6 +48,10 @@ const MagneticButton = ({
   };
 
   const handleMouseLeave = () => {
+    dispatch({
+      type: ACTION_TYPES.SET_IS_OVER_BUTTON,
+      payload: false,
+    });
     gsap.killTweensOf($item.current);
     gsap.killTweensOf($root.current);
     gsap.to($item.current, {
