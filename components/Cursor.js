@@ -1,10 +1,8 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import gsap from "gsap";
 import { StoreContext } from "../store/store-context";
 
 const Cursor = () => {
-  const [isBig, setIsBig] = useState(false);
-
   const {
     state: { isOverButton },
   } = useContext(StoreContext);
@@ -13,8 +11,6 @@ const Cursor = () => {
     let ball = document.querySelector(".ball");
 
     if (isOverButton) {
-      // widthSet(200);
-      // heightSet(200);
       gsap.fromTo(
         ball,
         {
@@ -50,9 +46,7 @@ const Cursor = () => {
       );
     }
 
-    return () => {
-      setIsBig(false);
-    };
+    return () => {};
   }, [isOverButton]);
 
   useEffect(() => {
@@ -123,3 +117,5 @@ const Cursor = () => {
 };
 
 export default Cursor;
+
+// TODO: deactivate component on mobile

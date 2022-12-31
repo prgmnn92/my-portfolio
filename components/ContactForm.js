@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { addFormSubmission } from "../firebase/firebase";
 import MagneticButton from "./MagneticButton";
 
 const ArrowIcon = (props) => {
@@ -28,9 +29,17 @@ const ArrowIcon = (props) => {
 };
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("first");
+
+    const res = addFormSubmission(name, email, message);
+    setName("");
+    setEmail("");
+    setMessage("");
+    //console.log(res);
   };
 
   return (
@@ -39,8 +48,9 @@ const ContactForm = () => {
         get in contact 👋
       </h2>
       <form
-        action="/api/form"
+        // action="/api/form"
         method="post"
+        onSubmit={handleSubmit}
         className="grid grid-cols-2 gap-2 md:gap-4"
       >
         <input
@@ -49,6 +59,8 @@ const ContactForm = () => {
           name="Name"
           placeholder="Name"
           id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           type="email"
@@ -57,6 +69,8 @@ const ContactForm = () => {
           placeholder="Email"
           id="email"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           type="text"
@@ -65,6 +79,8 @@ const ContactForm = () => {
           placeholder="Message"
           id="message"
           rows={5}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <div className="relative">
           <ArrowIcon className="absolute left-[140px] bottom-[-15px] rotate-180" />
