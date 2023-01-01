@@ -1,14 +1,13 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import firebase, { initializeApp } from "firebase/app";
+
 // import { getAnalytics } from "firebase/analytics";
 import {
   getFirestore,
   collection,
   addDoc,
   getDocs,
-  setDoc,
   Timestamp,
-  doc,
 } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -16,7 +15,7 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY, // "AIzaSyCPJGkql4YXVMptNBtTExolBzncb8M8ylQ",
   authDomain: "phillippargmann-6687b.firebaseapp.com",
   projectId: "phillippargmann-6687b",
   storageBucket: "phillippargmann-6687b.appspot.com",
@@ -29,7 +28,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-// Initialize Cloud Firestore and get a reference to the service
+// FORM SUBMISSION HANDLING
 const db = getFirestore(app);
 
 export const getAllFormSubmissions = async () => {
@@ -68,3 +67,5 @@ export const addFormSubmission = (
 
   return docRef.id;
 };
+
+export default firebase;

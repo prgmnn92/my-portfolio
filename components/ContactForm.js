@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addFormSubmission } from "../firebase/firebase";
+import { addFormSubmission } from "../firebase";
 import MagneticButton from "./MagneticButton";
 
 const ArrowIcon = (props) => {

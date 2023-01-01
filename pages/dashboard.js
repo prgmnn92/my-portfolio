@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
-import { getAllFormSubmissions } from "../firebase/firebase";
+import { getAllFormSubmissions } from "../firebase";
 
 const Dashboard = (props) => {
   const { formSubmissions } = props;
