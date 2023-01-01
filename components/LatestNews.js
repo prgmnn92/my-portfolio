@@ -15,6 +15,9 @@ const LatestNews = () => {
           <span className="opacity-80 font-medium"> ongoing</span>
         </p>
         <p className="pt-4">
+          I wish you a Happy New Year! 🍾 May the coming year be full of grand
+          adventures and opportunities!
+          <br />
           Recently I built my new portfolio with NextJS using tailwindcss. I
           really hope you enjoy it! : ) <br />
           Besides my Webflow clients that I'm serving, I'm looking for potential
