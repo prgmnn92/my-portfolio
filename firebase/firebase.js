@@ -47,12 +47,16 @@ export const getAllFormSubmissions = async () => {
 export const addFormSubmission = (
   name = "Did not give his name",
   email = "no email available",
-  message = "Nothin written"
+  message = "Nothing written"
 ) => {
   const docRef = addDoc(collection(db, "submissions"), {
-    name: name,
+    to: "pargmann92@gmail.com",
+    message: {
+      subject: `Form Submission from ${name}!`,
+      html: `From ${email} following message: ${message}`,
+    },
     email: email,
-    message: message,
+    name: name,
     date: Timestamp.now(),
   })
     .then((docRef) => {

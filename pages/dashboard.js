@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
-
 import { getAllFormSubmissions } from "../firebase/firebase";
 
 const Dashboard = (props) => {
@@ -10,6 +9,7 @@ const Dashboard = (props) => {
   return (
     <div>
       <Container>
+        {parsedSubmissions.length <= 0 && <div>No submissions so far...</div>}
         {parsedSubmissions ? (
           parsedSubmissions
             .sort(function (a, b) {
@@ -22,7 +22,7 @@ const Dashboard = (props) => {
                   <div className="px-4">{date.toLocaleString()}</div>
                   <div className="px-4">{item.name}</div>
                   <div className="px-4">{item.email}</div>
-                  <div className="px-4">{item.message}</div>
+                  <div className="px-4">{item.message.html}</div>
                 </div>
               );
             })
@@ -34,7 +34,7 @@ const Dashboard = (props) => {
   );
 };
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const fetchedSubmissions = await getAllFormSubmissions();
   const submissions = JSON.stringify(fetchedSubmissions);
   return {
