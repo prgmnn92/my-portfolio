@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import { Howl } from "howler";
+
 import { addFormSubmission } from "../firebase";
 import MagneticButton from "./MagneticButton";
 
@@ -32,10 +35,21 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const pop = new Howl({
+    src: ["/assets/pop2.mp3"],
+    volume: 0.7,
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields to submit a message! :)");
+      return 0;
+    }
 
     const res = addFormSubmission(name, email, message);
+    toast.success("Thanks for your message!");
+    pop.play();
     setName("");
     setEmail("");
     setMessage("");

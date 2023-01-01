@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { Howl } from "howler";
 
 import MagneticButton from "./MagneticButton";
 
 const Smiley = () => {
   const [isHover, setIsHover] = useState(false);
+
+  useEffect(() => {
+    const ping = new Howl({
+      src: ["/assets/ping.mp3"],
+      volume: 0.7,
+    });
+
+    if (isHover) {
+      ping.play();
+    }
+
+    return () => {};
+  }, [isHover]);
+
   return (
     <div
       className="absolute w-[70px] right-16 bottom-0 md:right-32 md:bottom-32"

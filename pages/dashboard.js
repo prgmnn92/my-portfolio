@@ -79,3 +79,5 @@ export async function getStaticProps() {
 }
 
 export default Dashboard;
+
+// TODO: provide site only when signed in (remove flashing of site)
