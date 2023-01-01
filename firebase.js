@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import firebase, { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 
 // import { getAnalytics } from "firebase/analytics";
 import {
@@ -67,5 +67,3 @@ export const addFormSubmission = (
 
   return docRef.id;
 };
-
-export default firebase;
