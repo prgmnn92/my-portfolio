@@ -51,8 +51,8 @@ export const addFormSubmission = (
   const docRef = addDoc(collection(db, "submissions"), {
     to: "pargmann92@gmail.com",
     message: {
-      subject: `Form Submission from ${name}!`,
-      html: `From ${email} following message: ${message}`,
+      subject: `Form Submission from ${name}!, ${email}`,
+      html: `${message}`,
     },
     email: email,
     name: name,

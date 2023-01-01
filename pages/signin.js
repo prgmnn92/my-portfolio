@@ -9,7 +9,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const { signIn, signInWithGoogle } = useAuth();
+  const { signIn, signInWithGoogle, logout } = useAuth();
 
   const onSubmit = (event) => {
     // setError(null);
