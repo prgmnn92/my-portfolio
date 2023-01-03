@@ -19,7 +19,7 @@ const Dashboard = (props) => {
   }, [authUser, loading]);
 
   return (
-    <div>
+    <>
       <Container>
         <div className="absolute right-8 top-8">
           <MagneticButton onClick={logout}>Logout</MagneticButton>
@@ -64,7 +64,7 @@ const Dashboard = (props) => {
           )}
         </section>
       </Container>
-    </div>
+    </>
   );
 };
 

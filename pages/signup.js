@@ -31,7 +31,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <>
       <Container>
         <h1 className="text-2xl py-8">Sign Up Page</h1>
         <form className="grid grid-cols-2 gap-2 md:gap-4" onSubmit={onSubmit}>
@@ -55,7 +55,7 @@ const Signup = () => {
           <MagneticButton onClick={logout}>Logout</MagneticButton>
         </div>
       </Container>
-    </div>
+    </>
   );
 };
 
