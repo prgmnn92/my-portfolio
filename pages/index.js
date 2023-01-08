@@ -6,10 +6,11 @@ import Container from "../components/Container";
 import FeaturedProjects from "../components/FeaturedProjects";
 import Footer from "../components/Footer";
 import LatestNews from "../components/LatestNews";
+import { getSortedPostsData } from "../lib/posts";
 
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <>
       <Head>
@@ -30,7 +31,7 @@ export default function Home() {
           <LatestNews />
         </section>
         <section className="py-8 md:py-16">
-          <BlogList />
+          <BlogList blogData={allPostsData} />
         </section>
         <section className="py-8 md:py-16">
           <ContactForm />
@@ -39,4 +40,13 @@ export default function Home() {
       </Container>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }

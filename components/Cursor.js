@@ -113,7 +113,7 @@ const Cursor = () => {
     };
   }, []);
 
-  return <div className="ball init"></div>;
+  return <div className="z-50 opacity-0 ball init md:opacity-100"></div>;
 };
 
 export default Cursor;

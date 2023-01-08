@@ -115,38 +115,38 @@ const Navbar = () => {
       >
         {mobileOpen ? <Cross /> : <Burger />}
       </div>
-      <nav className="bg-[#1e1e1e] h-screen py-2 px-6 px-16 sticky top-0">
-        <div className="text-4xl font-bold pt-8 pb-16">Phillip</div>
+      <nav className="bg-[#1e1e1e] h-screen py-2 px-16 sticky top-0">
+        <div className="pt-8 pb-16 text-4xl font-bold">Phillip</div>
         <div className="ml-[-0.5rem] flex flex-col ">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </div>
-        <div className="py-16 text-neutral-500 flex flex-col">
+        <div className="flex flex-col py-16 text-neutral-500">
           <a
-            className="py-2 hover:text-brick-red transition-all"
+            className="py-2 transition-all hover:text-brick-red"
             href="#"
             target="_blank"
           >
             <Twitter />
           </a>
           <a
-            className="py-2 hover:text-brick-red transition-all"
+            className="py-2 transition-all hover:text-brick-red"
             href="#"
             target="_blank"
           >
             <Instagram />
           </a>
           <a
-            className="py-2 hover:text-brick-red transition-all"
+            className="py-2 transition-all hover:text-brick-red"
             href="#"
             target="_blank"
           >
             <Linkedin />
           </a>
           <a
-            className="py-2 hover:text-brick-red transition-all"
+            className="py-2 transition-all hover:text-brick-red"
             href="#"
             target="_blank"
           >
@@ -155,7 +155,7 @@ const Navbar = () => {
         </div>
         {/* <div>
           <button
-            className="p-2 radius-2 border rounded-lg bg-gray-100 transition-all"
+            className="p-2 transition-all bg-gray-100 border rounded-lg radius-2"
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }

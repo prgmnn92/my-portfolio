@@ -1,34 +1,40 @@
+import Link from "next/link";
 import React from "react";
 
 const BlogItem = (props) => {
   return (
-    <a
-      className="drop-shadow bg-white rounded-2xl p-4 flex justify-between mb-4"
+    <Link
+      className="flex justify-between p-4 mb-4 bg-white drop-shadow rounded-2xl"
       href={props.href}
-      target="_blank"
-      rel="noreferrer"
+      as={props.as}
     >
       <div>
-        <span className="mr-2 md:mr-4 font-bold">{props.id}</span>
+        <span className="mr-2 font-bold md:mr-4">{props.id}</span>
         <span>{props.title}</span>
       </div>
       <span className="pl-2 font-semibold">{props.category}</span>
-    </a>
+    </Link>
   );
 };
 
-const BlogList = () => {
+const BlogList = ({ blogData }) => {
+  console.log(blogData);
   return (
     <div>
-      <h2 className="text-xl md:text-3xl text-brick-red font-medium pb-4 md:pb-8">
+      <h2 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
         blog and latest thoughts ✏️
       </h2>
-      <BlogItem
-        title="Starting into a new life as a digital nomad"
-        category="life"
-        id="01"
-        href="https://medium.com/@pargmann92/starting-into-a-new-life-as-a-digital-nomad-d57b82fa4922"
-      />
+      {blogData.map((item, id) => (
+        <BlogItem
+          title={item.title}
+          category={item.category}
+          id={id + 1}
+          key={item.id}
+          content={item.content}
+          as={`/posts/${item.id}`} // TODO: change to slug
+          href="/posts/[slug]"
+        />
+      ))}
     </div>
   );
 };
