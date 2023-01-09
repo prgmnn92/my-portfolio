@@ -18,7 +18,6 @@ const BlogItem = (props) => {
 };
 
 const BlogList = ({ blogData }) => {
-  console.log(blogData);
   return (
     <div>
       <h2 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
@@ -28,7 +27,7 @@ const BlogList = ({ blogData }) => {
         <BlogItem
           title={item.title}
           category={item.category}
-          id={id + 1}
+          id={("0" + (id + 1)).slice(-2)}
           key={item.id}
           content={item.content}
           as={`/posts/${item.id}`} // TODO: change to slug
