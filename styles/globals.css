@@ -42,3 +42,7 @@ body {
   height: 0px;
   transition: all .3s ease;
 }
+
+.markdown > p {
+  padding: 8px 0;
+}

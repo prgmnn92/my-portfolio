@@ -5,28 +5,33 @@ import Container from "../../components/Container";
 import cn from "classnames";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Posts = (props) => {
   const { title, date, content, image, id } = props.post;
-  console.log(props.post);
-  console.log(image);
   return (
     <div>
       <Container>
-        <Image
-          src={image}
-          alt={`Cover Image for ${title}`}
-          className={cn("shadow-sm w-full max-h-[430px] object-cover", {
-            "hover:shadow-lg transition-shadow duration-200": id,
-          })}
-          width={1300}
-          height={430}
-        />
-        <h1 className="py-8 text-3xl">{title}</h1>
-        <div
-          // className={markdownStyles["markdown"]}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <div className="max-w-screen-sm">
+          <Image
+            src={image}
+            alt={`Cover Image for ${title}`}
+            className={cn("shadow-sm w-full max-h-[430px] object-cover", {
+              "hover:shadow-lg transition-shadow duration-200": id,
+            })}
+            width={1300}
+            height={430}
+          />
+          <h1 className="pt-8 text-3xl">{title}</h1>
+          <div
+            className="py-8 text-lg md:text-xl markdown"
+            // className={markdownStyles["markdown"]}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+          <Link href={"/"} className="underline">
+            Go Back
+          </Link>
+        </div>
       </Container>
     </div>
   );
