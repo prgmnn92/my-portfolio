@@ -121,7 +121,7 @@ const Navbar = () => {
           <NavLink href="/">Home</NavLink>
           {/* <NavLink href="/about">About</NavLink> */}
           <NavLink href="/projects">Projects</NavLink>
-          {/* <NavLink href="/contact">Contact</NavLink> */}
+          <NavLink href="/#contact">Contact</NavLink>
         </div>
         <div className="flex flex-col py-16 text-neutral-500">
           {/* <a

@@ -14,7 +14,7 @@ export default function Home({ allPostsData }) {
   return (
     <>
       <Head>
-        <title>Phillip Pargmann</title>
+        <title>Phillip Pargmann | Home</title>
         <meta
           name="description"
           content="Phillip Pargmann Frontend Developer Portfolio Page"
@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
         <section className="py-8 md:py-16">
           <BlogList blogData={allPostsData} />
         </section>
-        <section className="py-8 md:py-16">
+        <section id="contact" className="py-8 md:py-16">
           <ContactForm />
         </section>
         <Footer />

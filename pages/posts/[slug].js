@@ -73,3 +73,6 @@ export async function getStaticPaths() {
 }
 
 export default Posts;
+
+// TODO: setup SEO, Metatitle and so on
+// TODO: fix slug issue

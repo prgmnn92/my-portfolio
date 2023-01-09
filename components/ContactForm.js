@@ -58,7 +58,7 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h2 className="text-xl md:text-3xl text-brick-red font-medium pb-4 md:pb-8">
+      <h2 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
         get in contact 👋
       </h2>
       <form
@@ -69,7 +69,7 @@ const ContactForm = () => {
       >
         <input
           type="text"
-          className="drop-shadow bg-white rounded-2xl p-4 col-span-1"
+          className="col-span-1 p-4 bg-white drop-shadow rounded-2xl"
           name="Name"
           placeholder="Name"
           id="name"
@@ -78,7 +78,7 @@ const ContactForm = () => {
         />
         <input
           type="email"
-          className="drop-shadow bg-white rounded-2xl p-4 col-span-1"
+          className="col-span-1 p-4 bg-white drop-shadow rounded-2xl"
           name="Email"
           placeholder="Email"
           id="email"
@@ -88,7 +88,7 @@ const ContactForm = () => {
         />
         <textarea
           type="text"
-          className="drop-shadow bg-white rounded-2xl p-4 col-span-2"
+          className="col-span-2 p-4 bg-white drop-shadow rounded-2xl"
           name="Message"
           placeholder="Message"
           id="message"

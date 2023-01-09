@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
@@ -38,6 +39,15 @@ const Projects = () => {
 
   return (
     <>
+      <Head>
+        <title>Phillip Pargmann | Projects</title>
+        <meta
+          name="description"
+          content="Phillip Pargmann Frontend Developer Portfolio Page"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/favicon.png" />
+      </Head>
       <Container>
         <section className="py-8 md:pt-4 md:pb-16">
           <h1 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
