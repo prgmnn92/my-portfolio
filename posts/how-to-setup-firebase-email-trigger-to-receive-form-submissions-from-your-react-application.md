@@ -20,7 +20,7 @@ First of all you need to create a firebase project where you can add the email t
 npm install firebase
 ```
 
-1. Add basic setup to your project.
+2. Add basic setup to your project.
 
 ```jsx
 // Import the functions you need from the SDKs you need
