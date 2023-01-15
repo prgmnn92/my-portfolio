@@ -53,7 +53,6 @@ const ContactForm = () => {
     setName("");
     setEmail("");
     setMessage("");
-    //console.log(res);
   };
 
   return (
@@ -62,7 +61,6 @@ const ContactForm = () => {
         get in contact 👋
       </h2>
       <form
-        // action="/api/form"
         method="post"
         onSubmit={handleSubmit}
         className="grid grid-cols-2 gap-2 md:gap-4"

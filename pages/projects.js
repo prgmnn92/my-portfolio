@@ -71,3 +71,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+// TODO: Project categories

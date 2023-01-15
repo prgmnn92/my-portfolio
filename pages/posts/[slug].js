@@ -3,6 +3,7 @@ import { getAllPosts, getPostBySlug } from "../../lib/posts";
 import markdownToHtml from "../../lib/markdownToHtml";
 import Container from "../../components/Container";
 import cn from "classnames";
+import ReactMarkdown from "react-markdown";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -22,12 +23,12 @@ const Posts = (props) => {
             width={1300}
             height={430}
           />
-          <h1 className="pt-8 text-3xl">{title}</h1>
-          <div
+          {/* <div
             className="py-8 text-lg md:text-xl markdown"
             // className={markdownStyles["markdown"]}
             dangerouslySetInnerHTML={{ __html: content }}
-          />
+          /> */}
+          <ReactMarkdown className="prose">{content}</ReactMarkdown>
           <Link href={"/"} className="underline">
             Go Back
           </Link>
@@ -45,7 +46,8 @@ export async function getStaticProps({ params }) {
     "content",
     "image",
   ]);
-  const content = await markdownToHtml(post.content || "");
+  //const content = await markdownToHtml(post.content || "");
+  const content = post.content || "";
 
   return {
     props: {

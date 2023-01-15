@@ -80,34 +80,6 @@ const Cursor = () => {
 
     window.addEventListener("mousemove", handleBall);
 
-    // document.addEventListener("mouseleave", function (event) {
-    //   if (
-    //     event.clientY <= 0 ||
-    //     event.clientX <= 0 ||
-    //     event.clientX >= window.innerWidth ||
-    //     event.clientY >= window.innerHeight
-    //   ) {
-    //     if (!ball.classList.contains("hide")) {
-    //       ball.classList.add("hide");
-    //     }
-    //   }
-    // });
-
-    // document.addEventListener("mouseenter", function (event) {
-    //   if (
-    //     event.clientY <= 0 ||
-    //     event.clientX <= 0 ||
-    //     event.clientX >= window.innerWidth ||
-    //     event.clientY >= window.innerHeight
-    //   ) {
-    //   } else {
-    //     if (ball.classList.contains("hide")) {
-    //       ball.classList.remove("hide");
-    //     }
-    //   }
-    // });
-
-    // cleanup this component
     return () => {
       window.removeEventListener("mousemove", handleBall);
     };

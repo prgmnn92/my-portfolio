@@ -5,6 +5,8 @@ category: "life"
 image: "/images/peggy-anke.jpg"
 ---
 
+# Starting into a new life as a digital nomad
+
 **What do you want from life?**
 
 My wife and I have decided to quit our permanent, well-paying, full-time jobs and go traveling.
