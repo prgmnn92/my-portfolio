@@ -3,6 +3,7 @@ title: "How to setup firebase email trigger to receive form submissions from you
 date: "2023-01-15"
 category: "howto"
 image: "/images/Firebase1.png"
+description: "Form submissions made easy"
 ---
 
 # How to setup firebase email trigger to receive form submissions from your react application
@@ -45,11 +46,11 @@ const app = initializeApp(firebaseConfig);
 
 Now you can add the extension to your project. You go to Development and Extensions. There you should find the extension directly.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef861b82-b05c-48f8-a84c-301a5eb045e5/Untitled.png)
+![Email Trigger Extension](/images/settings.png)
 
 You need to upgrade your plan to “Blaze” to enable the extension but as long you don’t go over a certain amount of submissions per month this will stay free. You are able set your budget to $0. Then follow the next steps until step 4, where you can configure your extension. In the following image you can see how I set up my project. If you’re using gmail and wondering how to get your SMTP password read the following section.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/51798996-35e9-4ab9-aa98-bb4b2c91ee5a/Untitled.png)
+![Settings for email trigger](/images/settings2.png)
 
 ### **How to get the App Password for Gmail**
 

@@ -3,6 +3,7 @@ title: "Starting into a new life as a digital nomad"
 date: "2022-12-27"
 category: "life"
 image: "/images/peggy-anke.jpg"
+description: "We're heading out"
 ---
 
 # Starting into a new life as a digital nomad
