@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import classNames from "classnames";
-
-import styles from "../styles/Navbar.module.css";
 
 import cn from "classnames";
 
@@ -91,12 +89,6 @@ const Cross = () => (
 );
 
 const Navbar = () => {
-  // const [mounted, setMounted] = useState(false);
-  // const { resolvedTheme, setTheme } = useTheme();
-
-  // // After mounting, we have access to the theme
-  // useEffect(() => setMounted(true), []);
-
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -116,7 +108,9 @@ const Navbar = () => {
         {mobileOpen ? <Cross /> : <Burger />}
       </div>
       <nav className="bg-[#1e1e1e] h-screen py-2 px-16 sticky top-0">
-        <div className="pt-8 pb-16 text-4xl font-bold">Phillip</div>
+        <Link href={"/"}>
+          <div className="pt-8 pb-16 text-4xl font-bold">Phillip</div>
+        </Link>
         <div className="ml-[-0.5rem] flex flex-col ">
           <NavLink href="/">Home</NavLink>
           {/* <NavLink href="/about">About</NavLink> */}
