@@ -59,7 +59,7 @@ const Posts = (props) => {
         />
       </Head>
       <Container>
-        <div className="max-w-screen-sm">
+        <div className="max-w-screen-sm mx-auto">
           <Image
             src={image}
             alt={`Cover Image for ${title}`}
