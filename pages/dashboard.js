@@ -16,7 +16,7 @@ const Dashboard = (props) => {
   // Listen for changes on loading and authUser, redirect if needed
   useEffect(() => {
     if (!loading && !authUser) router.push("/");
-  }, [authUser, loading]);
+  }, [authUser, loading, router]);
 
   return (
     <>
@@ -25,7 +25,7 @@ const Dashboard = (props) => {
           <MagneticButton onClick={logout}>Logout</MagneticButton>
         </div>
         <section className="py-8 md:pt-4 md:pb-16">
-          <h2 className="text-xl md:text-3xl text-brick-red font-medium pb-4 md:pb-8">
+          <h2 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
             Form Submissions 👋
           </h2>
           {parsedSubmissions.length <= 0 && <div>No submissions so far...</div>}
@@ -39,9 +39,9 @@ const Dashboard = (props) => {
                 return (
                   <div
                     key={id}
-                    className="drop-shadow bg-white rounded-2xl p-4 mb-4"
+                    className="p-4 mb-4 bg-white drop-shadow rounded-2xl"
                   >
-                    <div className="pr-4 pb-4">{date.toLocaleString()}</div>
+                    <div className="pb-4 pr-4">{date.toLocaleString()}</div>
                     <div className="flex">
                       <div>
                         <div className="pr-4 font-bold">Name</div>
