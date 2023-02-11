@@ -14,7 +14,7 @@ const ProjectItem = (props) => {
         <span className="mr-2 font-bold md:mr-4">{props.id}</span>
         <span>{props.name}</span>
       </div>
-      <span className="pl-2 font-semibold">development</span>
+      <span className="pl-2 font-semibold">props.category</span>
     </Link>
   );
 };
@@ -60,6 +60,7 @@ const Projects = () => {
                   key={key}
                   href={projects[key].url}
                   name={projects[key].name}
+                  category={projects[key].category}
                 />
               );
             })}
