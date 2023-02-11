@@ -51,7 +51,7 @@ const Projects = () => {
       <Container>
         <section className="py-8 md:pt-4 md:pb-16">
           <h1 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
-            A collection of projects built by me 👋
+            A collection of my projects 👋
           </h1>
           <div>
             {Object.keys(projects).map((key) => {
