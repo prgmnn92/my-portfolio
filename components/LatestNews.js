@@ -6,33 +6,17 @@ const LatestNews = () => {
   const router = useRouter();
   return (
     <div>
-      <h2 className="text-xl md:text-3xl text-brick-red font-medium pb-4 md:pb-8">
+      <h2 className="pb-4 text-xl font-medium md:text-3xl text-brick-red md:pb-8">
         what’s going on 🏃
       </h2>
-      <div className="drop-shadow bg-white rounded-2xl p-4 pb-6">
+      <div className="p-4 pb-6 bg-white drop-shadow rounded-2xl">
         <p className="font-bold">
           Building things -
-          <span className="opacity-80 font-medium"> ongoing</span>
+          <span className="font-medium opacity-80"> ongoing</span>
         </p>
         <p className="pt-4">
-          I wish you a Happy New Year! 🍾 May the coming year be full of grand
-          adventures and opportunities!
-          <br />
-          Recently I built my new portfolio with NextJS using tailwindcss. I
-          really hope you enjoy it! : ) <br />
-          Besides my Webflow clients that I'm serving, I'm looking for potential
-          clients and new opportunities to build my React / NextJS Portfolio. 🙃
-          <br />
-          So, if you by any luck are looking for a developer who has
-          <b> a passion for tech, loves to build things</b> and to
-          <b> learn new things</b> then{" "}
-          <a
-            className="underline cursor-pointer"
-            onClick={() => router.push("mailto:pargmann92@gmail.com")}
-          >
-            hit me up!
-          </a>
-          <br />
+          Recently I built my new portfolio with NextJS using Tailwindcss. I
+          really hope you enjoy it! : )
         </p>
         <p className="pt-4 ">Cheers</p>
         <p>Phillip</p>
