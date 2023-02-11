@@ -14,7 +14,7 @@ const ProjectItem = (props) => {
         <span className="mr-2 font-bold md:mr-4">{props.id}</span>
         <span>{props.name}</span>
       </div>
-      <span className="pl-2 font-semibold">props.category</span>
+      <span className="pl-2 font-semibold">{props.category}</span>
     </Link>
   );
 };
