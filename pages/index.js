@@ -30,9 +30,9 @@ export default function Home({ allPostsData }) {
         <section className="py-8 md:py-16">
           <LatestNews />
         </section>
-        <section className="py-8 md:py-16">
+        {/* <section className="py-8 md:py-16">
           <BlogList blogData={allPostsData} />
-        </section>
+        </section> */}
         <section id="contact" className="py-8 md:py-16">
           <ContactForm />
         </section>
